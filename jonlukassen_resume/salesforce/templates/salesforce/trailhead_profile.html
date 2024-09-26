@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salesforce Trailhead Progress</title>
+</head>
+<body>
+    <h1>My Salesforce Trailhead Badges</h1>
+
+    {% if badges %}
+    <ul>
+        {% for badge in badges %}
+            <li>{{ badge }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No badges found or unable to load data.</p>
+    {% endif %}
+</body>
+</html>

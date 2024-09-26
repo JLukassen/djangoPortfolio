@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repositories</title>
+</head>
+<body>
+    <h1>My GitHub Repositories</h1>
+    <ul>
+        {% for repo in repos %}
+            <li>
+                <h2>{{ repo.name }}</h2>
+                <p>{{ repo.description }}</p>
+                <a href="{{ repo.html_url }}">View Repository</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

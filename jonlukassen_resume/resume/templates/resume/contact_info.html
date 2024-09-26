@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information</title>
+</head>
+<body>
+    <h1>Contact Information</h1>
+    <p>Name: {{ contact.name }}</p>
+    <p>Email: <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></p>
+    <p>Phone: {{ contact.phone_number }}</p>
+    <p>LinkedIn: <a href="{{ contact.linkedin_url }}">{{ contact.linkedin_url }}</a></p>
+    <p>GitHub: <a href="{{ contact.github_url }}">{{ contact.github_url }}</a></p>
+</body>
+</html>
