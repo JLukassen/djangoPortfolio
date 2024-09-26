@@ -6,7 +6,7 @@ class Command(BaseCommand):
     help = 'Fetch repositories from GitHub and save them to the database'
 
     def handle(self, *args, **kwargs):
-        username = 'your_github_username'  # Replace with your GitHub username
+        username = 'JLukassen'  # Replace with your GitHub username
         url = f'https://api.github.com/users/JLukassen/repos'
         response = requests.get(url)
 
