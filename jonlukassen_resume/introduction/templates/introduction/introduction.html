@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
+        <style>
+/* Side navigation menu */
+.sidenav {
+    height: 100%;  /* Full-height */
+    width: 0;  /* Initial width of 0, hidden */
+    position: fixed;  /* Fixed position */
+    z-index: 1;  /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111;  /* Black background color */
+    overflow-x: hidden;  /* Disable horizontal scrolling */
+    transition: 0.5s;  /* Smooth transition for opening and closing */
+    padding-top: 60px;  /* Spacing from the top */
+}
+
+/* Style side navigation links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Change link color on hover */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (x) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+</style>
+</head>
+<body>
+<!-- Three-lined menu button -->
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+<!-- The side navigation menu -->
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="{% url 'introduction_home' %}">Home</a>
+    <a href="{% url 'experience_home' %}">Experience</a>
+    <a href="{% url 'featured_repos' %}">Github</a>
+    <a href="{% url 'trailhead_profile' %}">Salesforce</a>
+    <a href="{% url 'project_list' %}">Projects</a>
+    <a href="{% url 'resume_contact' %}">Contact</a>
+    <!-- Add more links here for other sections -->
+</div>
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+<div class="container">
+        <h1>Welcome to Jon Lukassen's Portfolio</h1>
+        <p>This site will guide you through my professional journey, side projects, and achievements. Below are some of the sections you can explore:</p>
+
+        <!-- Work Experience Section -->
+        <div class="section">
+            <h2>Work Experience</h2>
+            <p>Explore the professional roles I've held, the responsibilities I've handled, and the skills I've developed throughout my career.</p>
+            <a href="{% url 'experience_home' %}" class="btn btn-primary">View Work Experience</a>
+        </div>
+
+        <!-- GitHub Section -->
+        <div class="section">
+            <h2>GitHub</h2>
+            <p>Check out my latest contributions and repositories on GitHub.</p>
+            <a href="https://github.com/JLukassen" target="_blank" class="btn btn-primary">Visit GitHub</a>
+        </div>
+
+        <!-- Salesforce Trailblazer Progress -->
+        <div class="section">
+            <h2>Salesforce Trailblazer Progress</h2>
+            <p>Follow my journey in becoming a certified Salesforce professional through my Trailblazer achievements.</p>
+            <a href="https://trailblazer.me/id/JLukassen" target="_blank" class="btn btn-primary">View Trailblazer Profile</a>
+        </div>
+
+            <!-- Side Projects Section -->
+        <div class="section">
+            <h2>Side Projects</h2>
+            <p>Discover the side projects I’ve worked on, including code repositories and live demos of the tools and apps I've built.</p>
+            <a href="{% url 'project_list' %}" class="btn btn-primary">View Side Projects</a>
+        </div>
+
+        <!-- Contact Section -->
+
+
+    <!-- Optional CSS for section styling -->
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .section p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</body>
+</html>

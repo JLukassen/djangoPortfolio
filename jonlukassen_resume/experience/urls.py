@@ -2,5 +2,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.experience_home, name='experience_home'),
+    path('experience', views.experience_home, name='experience_home'),  # Base URL for /experience/
 ]
