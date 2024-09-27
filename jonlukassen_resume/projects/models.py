@@ -6,6 +6,7 @@ class SideProject(models.Model):
     description = models.TextField()
     github_link = models.URLField(blank=True, null=True)
     live_demo = models.URLField(blank=True, null=True)  # Optional field for live demo links
+    image = models.ImageField(upload_to='media/projects/', blank=True, null=True)  # New image field
 
     def __str__(self):
         return self.title

@@ -1,6 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
 from .models import WorkExperience
 
-admin.site.register(WorkExperience)
+
+class WorkExperienceAdmin(admin.ModelAdmin):
+    list_display = ['job_title', 'company_name', 'start_date', 'end_date', 'description', 'image']
+
+admin.site.register(WorkExperience, WorkExperienceAdmin)

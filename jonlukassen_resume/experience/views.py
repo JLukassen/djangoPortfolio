@@ -1,7 +1,11 @@
 from django.shortcuts import render
 
-# Create your views here.
-from django.http import HttpResponse
+from .models import WorkExperience
+
 
 def experience_home(request):
-    return HttpResponse("Welcome to the Work Experience section!")
+    work_experiences = WorkExperience.objects.all()  # Get all job experiences from the database
+    return render(request, 'experience/home.html', {'work_experiences': work_experiences})
+
+#def introduction_home(request):
+ #   return render(request, 'experience/introduction.html')
