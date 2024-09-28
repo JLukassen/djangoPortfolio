@@ -66,4 +66,4 @@ Thumbs.db
 
 # Pytest cache
 .pytest_cache/
-/awesome_website/awesome_website/__init__.py
+/awesome_website/awesome_website/__init__.py.htaccess
