@@ -7,6 +7,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('grappelli/', include('grappelli.urls')),
     path('', include('introduction.urls')),  # Root URL leads to introduction page
     # Assign base paths for each app
     path('experience/', include('experience.urls')),  # Work Experience app
@@ -14,7 +15,4 @@ urlpatterns = [
     path('github/', include('github.urls')),  # GitHub app
     path('salesforce/', include('salesforce.urls')),  # Salesforce app
     path('resume/', include('resume.urls')),  # Resume/Contact app
-]
-
-# Serve media files in development
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
